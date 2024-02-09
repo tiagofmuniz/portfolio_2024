@@ -1,7 +1,13 @@
 import Link from 'next/link';
 import styles from './InteractiveIconTower.module.scss';
 
-export default function InteractiveIconTower({ icon, url }) {
+interface InteractiveIconTowerProps {
+  id: string;
+  icon: React.ReactNode;
+  url: string;
+}
+
+export default function InteractiveIconTower({ id, icon, url }: InteractiveIconTowerProps) {
   return (
     <div className={styles.layer_tower_container}>
       <ul>
