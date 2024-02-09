@@ -1,0 +1,6 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+.footer{
+    padding: $md;
+    background-color: $bg_color_default;
+    text-align: center;
+}

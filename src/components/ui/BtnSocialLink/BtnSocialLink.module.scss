@@ -1,0 +1,107 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.socialItem {
+    display: flex;
+    min-width: 30%;
+    padding: $sm $md;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    gap: $sm;
+    font-size: $md;
+    color: $neutral_color;
+    background-color: rgba($bg_color_default, 1);
+    transition: .2s;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    svg {
+        fill: white;
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 3px 0px 1px #D2BB09;
+        border-radius: 0;
+        color: #D2BB09;
+
+        svg {
+            fill: #D2BB09;
+        }
+    }
+}
+
+@media (min-width:435px) and (max-width:540px) {
+    .socialItem {
+        padding: $sm; //*
+        font-size: .8*$md; //*
+
+        svg {
+            fill: white;
+            width: 25px; //*
+            height: 25px; //*
+            min-width: 25px; //*
+            min-height: 25px; //*
+        }
+    }
+}
+
+@media (min-width:401px) and (max-width:434px) {
+    .socialItem {
+        display: flex;
+        padding: $sm; //*
+        border-radius: 2px;
+        align-items: center;
+        justify-content: center;
+        gap: .5*$sm; //*
+        font-size: .7*$md; //*
+        color: $neutral_color;
+        background-color: rgba($bg_color_default, 1);
+        transition: .2s;
+        position: relative;
+        z-index: 1;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        svg {
+            fill: white;
+            width: 25px; //*
+            height: 25px; //*
+            min-width: 25px; //*
+            min-height: 25px; //*
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 3px 0px 1px #D2BB09;
+            border-radius: 0;
+            color: #D2BB09;
+
+            svg {
+                fill: #D2BB09;
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .socialItem {
+        padding: $sm; //*
+        gap: .5*$sm; //*
+        font-size: $sm; //*
+
+        svg {
+            fill: white;
+            width: 20px; //*
+            height: 20px; //*
+            min-width: 20px; //*
+            min-height: 20px; //*
+        }
+    }
+}

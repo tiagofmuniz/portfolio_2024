@@ -1,0 +1,72 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.mainContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $sm;
+    margin: $sm ;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      &:hover {
+        fill: $emphasys_color;
+      }
+    }
+  }
+
+  .content {
+    background-color: $bg_color_default;
+    padding: $md;
+    border-radius: $sm;
+    // width: 80%;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.2);
+    margin: $md;
+    font-size: $md;
+
+
+    h2 {
+      font-size: $md;
+      font-weight: 200;
+      padding: $sm 0;
+      color: $primary_color;
+      text-transform: uppercase;
+
+      span {
+        text-transform: capitalize;
+        color: $emphasys_color;
+      }
+    }
+
+    li {
+      padding: 0.5 * $sm;
+      text-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    padding: $md;
+    width: 95vw;
+
+    .content {
+      font-size: 1.4*$sm;
+
+      h2 {
+        font-size: 1.4*$sm;
+        color: $emphasys_color;
+      }
+    }
+  }
+}

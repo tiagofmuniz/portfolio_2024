@@ -1,0 +1,14 @@
+$text_base: 14px;
+$sm: 10px;
+$md: 18px;
+$lg: 25px;
+$xl: 50px;
+
+
+:export {
+    text_base: $text_base;
+    sm: $sm;
+    md: $md;
+    lg: $lg;
+    xl: $xl;
+}

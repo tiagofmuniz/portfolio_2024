@@ -1,0 +1,98 @@
+// Home.module.scss
+
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.layoutContainer {
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $md;
+  padding-top: $xl;
+  min-height: 90vh;
+  // border: 1px solid red;
+  min-height: 90vh;
+
+
+  .welcomeText {
+    h1 {
+      font-size: $xl;
+      padding-top: $xl;
+      line-height: 120%;
+      font-weight: 200;
+
+      .name {
+        font-weight: 600;
+        color: $emphasys_color;
+      }
+
+      .jobTitle {
+        font-weight: 300;
+        color: $emphasys_color;
+      }
+    }
+  }
+
+  .text {
+    .outline {
+      color: $emphasys_color;
+      font-size: $lg;
+      position: relative;
+      font-weight: 200;
+
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: $emphasys_color;
+        height: 1px;
+        width: 100px;
+        top: 0;
+        left: 0;
+        opacity: 1;
+      }
+
+      .experience {
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+  }
+
+  .socialContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: $md;
+  }
+
+}
+
+@media  (max-width:680px) {
+  .layoutContainer {
+    padding: $md;
+    .welcomeText {
+      text-align: center; //*
+      h1 {
+        font-size: 1.5*$lg;
+      }
+
+    }
+
+    .text {
+      text-align: center; //**
+
+      .outline {
+        font-size: $md; //*
+
+        &:after {
+          display: none; //*
+        }
+      }
+    }
+
+    .socialContainer {
+      gap: $sm;
+
+    }
+  }
+}

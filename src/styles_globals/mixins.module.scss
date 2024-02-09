@@ -1,0 +1,25 @@
+@import './colors.module.scss';
+@import './sizes.module.scss';
+
+@mixin title() {}
+
+@mixin subtitle() {}
+
+
+@mixin longContent() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin notImageDistortion() {
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    // width: 100%;
+}
+
+@mixin desktop() {
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        @content;
+    }
+}

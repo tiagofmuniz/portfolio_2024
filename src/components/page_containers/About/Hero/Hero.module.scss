@@ -1,0 +1,32 @@
+@import '../../../../styles_globals/custom_exports.module.scss';
+
+.hero_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $md;
+    padding: 0 $xl;
+
+    .profile_img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero_text {
+        border-left: 1px solid $emphasys_color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: $sm;
+
+        p {
+            margin-bottom: $sm;
+            font-weight: 200;
+            line-height: 140%;
+            text-align: left;
+        }
+
+    }
+}

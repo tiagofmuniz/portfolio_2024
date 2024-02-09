@@ -1,0 +1,36 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.projects_container {
+    width: 100%;
+    min-height: 100vh;
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:$md;
+        text-align: center;
+        
+        h1 {
+            font-size: $xl;
+            
+        }
+        
+        p {
+            &:nth-of-type(2){
+                color: $emphasys_color;
+                margin-bottom: $xl;
+            }
+        }
+        
+        .cardsContainer {
+            // border: 1px dashed yellow;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: $md;
+     
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.menu_container {
+    .miniNav {
+        display: none;
+    }
+
+    ul {
+        font-weight: 400;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        position: relative;
+        gap: $md;
+
+        li {
+            padding: 5px;
+        }
+    }
+
+    .border_animate {
+        position: relative;
+        overflow: hidden;
+
+        .link {
+            color: $emphasys_color;
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            height: .5px;
+            border-radius: 5px;
+            background-color: $emphasys_color;
+            width: 100%;
+            position: absolute;
+            animation: outline_burger .2s forwards;
+        }
+
+        &:before {
+            top: 0;
+            left: -100%;
+        }
+
+        &:after {
+            bottom: 0;
+            right: -100%;
+        }
+
+    }
+
+}
+
+
+@keyframes outline_burger {
+    to {
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width:420px) {
+    .menu_container {
+        text-align: center;
+        
+        ul {
+            width: 100%;
+           
+            gap: $sm;
+
+            li {
+                font-size: 1.5*$sm;
+            }
+        }
+
+        .border_animate {
+            color: $emphasys_color;
+  
+            &:after,
+            &:before {
+                display: none;
+             
+            }
+
+           
+
+        }
+
+    }
+}

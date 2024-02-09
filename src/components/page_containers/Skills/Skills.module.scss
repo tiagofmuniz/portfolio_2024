@@ -1,0 +1,25 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.skills_container {
+    display: flex;
+    flex-direction: column;
+
+    .skillItem {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $lg;
+        justify-content: center;
+        align-items: center;
+        font-size: inherit;
+        width: auto;
+
+        .cubeContainer {
+            width: 100px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            min-height: 150px;
+        }
+
+    }
+}

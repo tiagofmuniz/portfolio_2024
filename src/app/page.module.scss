@@ -1,0 +1,24 @@
+@import '../styles_globals/custom_exports.module.scss';
+
+.main {
+    padding: 0 2*$xl;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .section {
+        padding-bottom:3*$xl;
+    }
+}
+
+@media (min-width:321px) and (max-width:768px) {
+    .main {
+        padding: 0 2*$md;
+    }
+}
+
+@media (max-width:320px) {
+    .main {
+        padding: 0 $md;
+    }
+}

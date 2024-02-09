@@ -1,0 +1,155 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.aboutPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .hero_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $md;
+        padding: 0 $xl;
+
+        .profile_img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+
+        .hero_text {
+            border-left: 1px solid $emphasys_color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: $sm;
+
+            p {
+                width: 100%;
+                margin-bottom: $sm;
+                font-weight: 200;
+                line-height: 140%;
+                text-align: left;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-self: flex-end;
+        margin-top: 2 * $xl;
+        padding: $md;
+        gap: 3 * $xl;
+
+        .experiencesContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: $sm;
+        }
+
+        .personalInfoContainer {
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .profileInfos {
+                height: 100%;
+            }
+
+            .socialItems {
+                display: flex;
+                justify-content: space-around;
+                gap: $lg;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .aboutPageContainer {
+
+        .hero_container {
+            flex-direction: column;
+            gap: $md;
+            padding: 0;
+
+            .hero_text {
+                border:none;
+                p {
+                    text-align: center;
+                    padding: $sm;
+                }
+            }
+        }
+
+        .content {
+            flex-direction: column;
+            margin-top: $sm;
+            gap: $xl;
+
+            .experiencesContainer {
+                width: 100%;
+            }
+
+            .personalInfoContainer {
+                width: 100%;
+
+                .profileInfos {
+                    height: 100%;
+                }
+
+                .socialItems {
+                    margin-top: 50px;
+                    gap: $lg;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px){
+    .aboutPageContainer {
+
+        .hero_container {
+            flex-direction: column;
+            gap: $md;
+            padding: 0;
+
+            .hero_text {
+                border:none;
+                p {
+                    text-align: center;
+                    padding: $sm;
+                }
+            }
+        }
+
+        .content {
+            margin-top: $sm;
+            gap:$sm;
+
+            .experiencesContainer {
+                width: 100%;
+            }
+
+            .personalInfoContainer {
+                .profileInfos {
+                    height: 100%;
+                }
+
+                .socialItems {
+                    // removed empty comment
+                }
+            }
+        }
+    }
+}

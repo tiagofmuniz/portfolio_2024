@@ -1,0 +1,228 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+
+    .contactsContainer {
+        background-color: #1b191a;
+        color: #ffffff9f;
+        display: flex;
+        justify-content: center;
+        border-radius: $sm;
+
+        .content {
+            display: flex;
+            width: 100%;
+        }
+
+        .col {
+            flex: 1;
+            padding: $xl;
+        }
+
+        .leftCol {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .formContact {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                p {
+                    font-size: $sm;
+                }
+
+                input {
+                    background: $bg_color1;
+                    padding: $sm;
+                    margin-bottom: $sm;
+                    border: none;
+                    border-bottom: 1px solid $emphasys_color;
+                    color: #ffffff9f;
+                    outline: none;
+
+                    &::placeholder {
+                        color: #ffffff9f;
+                    }
+                }
+
+                textarea {
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    border: 1px solid #d2bb09;
+                    background-color: #1b191a;
+                    color: #ffffff9f;
+                    font-size: 16px;
+                    resize: vertical;
+                    min-height: 100px;
+
+                    &::placeholder {
+                        color: #ffffff9f;
+                    }
+                }
+
+                .buttonContainer {
+                    position: relative;
+                    overflow: hidden;
+                    display: inline;
+                    z-index: 1;
+                    width: 100%;
+
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: var(--buttonAfterPosition);
+                        background-color: $emphasys_color;
+                        z-index: 2;
+                        transition: all .5s;
+
+                    }
+
+                    button {
+                        width: 100%;
+                        color: var(--btnSubmitContactTextColor);
+                        position: relative;
+                        padding: 10px;
+                        border: none;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+                        background: none;
+                        border: 1px solid $emphasys_color;
+                        border-radius: .2 * $sm;
+                        font-weight: 400;
+                        z-index: 2;
+
+                        &:hover {
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .error {
+                    color: red;
+                    font-size: 1.5*$sm;
+                    padding: 5px;
+                }
+            }
+
+            .footerImage {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    object-fit: cover;
+                    width: 200px;
+                    height: 200px;
+                    max-height: 300px;
+                    opacity: .2;
+                }
+            }
+        }
+
+        .rightCol {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+
+            p {
+                color: $emphasys_color;
+                font-size: 1.4*$sm;
+                padding: $md;
+            }
+
+            .infos {
+                display: flex;
+                gap: $xl;
+            }
+
+            .quoteContainer {
+                max-width: 600px;
+                margin: $xl $md 0 $md;
+                border-radius: 5px;
+                position: relative;
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    color: $emphasys_color;
+                    font-size: $xl;
+                    display: inline-block;
+                    height: 100%;
+                    display: flex;
+                }
+
+                &:before {
+                    content: '\201C';
+                    top: -$md*1.2;
+                    left: -$md*1.2;
+                    align-items: flex-start;
+                }
+
+                &:after {
+                    content: '\201D';
+                    bottom: -$md*1.2;
+                    right: -$md*1.2;
+                    align-items: flex-end;
+                }
+
+                blockquote {
+                    font-size: 1.6*$sm;
+                    letter-spacing: -.75px;
+                    line-height: 120%;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .mainContainer {
+        .contactsContainer {
+            .content {
+                flex-direction: column;
+            }
+
+            .col {
+                padding: $md;
+            }
+
+            .leftCol {
+                .formContact {
+                    order: 2;
+
+                    p {
+                        font-size: $sm;
+                    }
+                }
+
+                .footerImage {
+                    order: 1;
+                }
+            }
+
+            .rightCol {
+                .planetIcon {
+                    display: none;
+                }
+                .quoteContainer {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

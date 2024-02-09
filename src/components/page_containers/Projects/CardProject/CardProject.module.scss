@@ -1,0 +1,77 @@
+@import '../../../../styles_globals/custom_exports.module.scss';
+
+.cardProjectContainer {
+    width: 30%;
+    min-width: 300px;
+    height: auto;
+
+    border: 1px solid #CCC;
+    border-radius: .5*$sm;
+    padding: $sm;
+    font-size: .8*$md;
+    background-color: $bg_color_default;
+
+    .header {
+        width: 100%;
+        min-height: 15%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $emphasys_color;
+        padding: $sm 0;
+        margin-bottom: $sm;
+
+        .folder {
+            width: 30px;
+            height: 30px;
+            fill: $emphasys_color;
+        }
+
+        .hashtagContainer {
+            align-self: center;
+            text-align: center;
+        }
+
+        .github {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
+
+    .content {
+        width: 100%;
+        // height: 85%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        text-overflow: ellipsis;
+        // border: 1px dashed yellow;
+        height: auto;
+
+
+
+
+        h1 {
+            text-align: left;
+            font-size: $md !important;
+            height: 15%;
+            overflow: hidden;
+        }
+
+        p {
+            max-height: 100%;
+            margin: 0;
+            text-overflow: ellipsis;
+            white-space: normal;
+            height: auto;
+            text-align: left;
+
+        }
+    }
+}
+@media (max-width:840px){
+    .cardProjectContainer {
+        min-width: 80%;
+
+    }
+}

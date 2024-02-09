@@ -1,0 +1,77 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.mainContainer {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  
+  
+  .img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5 * $sm;
+  }
+  
+  .mainScreen {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    
+    
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.5s;
+      overflow: hidden;
+      
+      ~.slideNavigationContainer {
+        margin-top: 1%;
+      }
+    }
+  }
+  
+  .slideNavigationContainer {
+    width: 105%;
+    margin-top: -10%;
+    height: auto;
+    cursor: grab;
+    overflow: hidden;
+    z-index: 2 !important;
+    padding: 5px;
+    transition: 0.5s;
+
+    .thumbnailContainer {
+      width: 100%;
+      height: auto;
+      display: flex;
+      gap: 5%;
+
+      .thumbnailItem {
+        min-width: 30%;
+        height: auto;
+        filter: blur(1px);
+
+        figure {
+          img {
+            object-fit: cover;
+            pointer-events: none;
+          }
+
+          figcaption {
+            text-align: center;
+            font-size: 0.8 * $md;
+          }
+        }
+
+        &.activeItem {
+          filter: none;
+          color: $emphasys_color;
+        }
+      }
+    }
+  }
+}

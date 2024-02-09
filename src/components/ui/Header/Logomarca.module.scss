@@ -1,0 +1,41 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.logomarca_container {
+    color: $emphasys_color;
+    position: relative;
+    // font-size: $md;
+    display: inline;
+
+    &:before {
+        content: '<';
+    }
+
+    &:after {
+        content: '/>';
+    }
+
+    &[data-custom-width="small"] {
+        font-size: $md;
+    }
+
+    &[data-custom-width="medium"] {
+        font-size: 2*$md;
+    }
+
+    &[data-custom-width="large"] {
+        font-size: 3*$xl;
+    }
+
+    &[data-custom-width="extra_large"] {
+        font-size: 4*$xl;
+    }
+}
+
+@media (max-width: 640px) {
+    .logomarca_container {
+        &[data-custom-width="medium"] {
+            font-size: $lg;
+        }
+    }
+
+}

@@ -1,0 +1,22 @@
+@import '../../styles_globals/custom_exports.module.scss';
+
+.sectionExperiencesContainer {
+  padding: $xl 0;
+  margin: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  animation: scale 2s ease;
+  animation-timeline: view();
+  animation-range: cover 0% cover 40%;
+  opacity: 1;
+
+  max-width: 80vw;
+  margin: 0 auto;
+  h1{
+    text-align: center;
+    
+  }
+}

@@ -1,0 +1,116 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.water_mark_container {
+  color: $emphasys_color;
+  font-style: italic;
+  display: block;
+  padding: $xl 0;
+
+  .water_mark_item {
+    position: relative;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    // border: 1px solid red;
+    justify-content: flex-start;
+    text-align: left;
+
+    .water_mark_text,
+    .water_mark_overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .water_mark_text {
+      z-index: 1;
+      font-size: 2em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      justify-content: flex-start;
+    }
+
+    .water_mark_overlay {
+      z-index: 0;
+      font-size: 8em;
+      font-weight: 900;
+      font-style: italic;
+      opacity: 0.1;
+
+      @supports (-webkit-text-stroke: 2px transparent) {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px $emphasys_color;
+      }
+    }
+  }
+}
+
+@media (max-width:420px) {
+  .water_mark_container {
+
+    align-self: flex-start;
+
+    .water_mark_item {
+      height: $lg;
+
+      .water_mark_text {
+        font-size: $md;
+      }
+
+      .water_mark_overlay {
+        font-size: 1.5*$lg;
+      }
+    }
+  }
+}
+
+@media (min-width:421px) and (max-width:768px) {
+  .water_mark_container {
+    .water_mark_item {
+      height: $xl;
+
+      .water_mark_text {
+        font-size: $md;
+      }
+
+      .water_mark_overlay {
+        font-size: $xl;
+      }
+    }
+  }
+}
+@media (min-width:769px) and (max-width:1024px) {
+  .water_mark_container {
+    .water_mark_item {
+      height: $xl;
+
+      .water_mark_text {
+        font-size: $lg;
+      }
+
+      .water_mark_overlay {
+        font-size: 1.2*$xl;
+      }
+    }
+  }
+}
+@media (min-width:1025px) and (max-width:1280px) {
+  .water_mark_container {
+    .water_mark_item {
+      height: 2*$xl;
+
+      .water_mark_text {
+        font-size: $lg;
+      }
+
+      .water_mark_overlay {
+        font-size: 2*$xl;
+      }
+    }
+  }
+}

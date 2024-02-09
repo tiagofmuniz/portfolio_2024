@@ -1,0 +1,30 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.lineIconKeyValue_container {
+    display: flex;
+    gap: $sm;
+    margin-bottom: $sm;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        span {
+            padding: 5px;
+
+            span {
+                font-weight: 400;
+                color: $neutral_color;
+
+            }
+
+
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: #FFF;
+        }
+    }
+}

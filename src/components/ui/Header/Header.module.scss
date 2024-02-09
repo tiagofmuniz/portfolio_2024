@@ -1,0 +1,25 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.header_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background-color: $bg_color_default;
+    padding: 0 $xl;
+    min-height: 70px;
+
+}
+
+@media (max-width: 420px) {
+    .header_container {
+        flex-direction: column;    
+    }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+    .header_container {
+        flex-direction: column;    
+    }
+}
+

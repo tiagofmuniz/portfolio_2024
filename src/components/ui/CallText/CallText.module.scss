@@ -1,0 +1,48 @@
+@import '../../../styles_globals/custom_exports.module.scss';
+
+.callTextContainer {
+    display: flex;
+    color: $emphasys_color;
+    position: relative;
+
+    svg {
+        fill: $emphasys_color;
+        width: 20px;
+        height: 20px;
+    }
+
+    span {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: $emphasys_color;
+            height: 1px;
+            width: 100px;
+            top: -15%;
+            left: 0;
+            opacity: 1;
+
+            }
+    }
+}
+
+
+
+.down {
+    svg {
+        transform: rotate(90deg);
+    }
+}
+
+.right {
+    svg {
+        transform: rotate(-90deg);
+    }
+}
+
+.top {
+    svg {
+        transform: rotate(180deg);
+    }
+}
