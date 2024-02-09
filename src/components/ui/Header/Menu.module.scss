@@ -58,30 +58,31 @@
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:460px) {
     .menu_container {
         text-align: center;
-        
+
         ul {
             width: 100%;
-           
             gap: $sm;
 
             li {
-                font-size: 1.5*$sm;
+                font-size: 1.4*$sm;
+                padding: 0;
+
             }
         }
 
         .border_animate {
             color: $emphasys_color;
-  
+
             &:after,
             &:before {
                 display: none;
-             
+
             }
 
-           
+
 
         }
 
