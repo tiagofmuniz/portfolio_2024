@@ -121,7 +121,7 @@ export default function Contacts() {
             <div className={styles.infos}>
               {contactList?.map((item) => (
                 <div key={item.label} id={item.label} className={styles.cubeContainer}>
-                  <InteractiveIconTower url={item.value} icon={item.icon} />
+                  <InteractiveIconTower url={item.value} icon={item.icon}/>
                 </div>
               ))}
             </div>
