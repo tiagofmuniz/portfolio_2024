@@ -27,12 +27,15 @@
         }
 
         .hashtagContainer {
-            align-self: center;
-            text-align: center;
             display: flex;
-            li{
-                padding: 2px;
-            }
+            flex-wrap: wrap; /* Adiciona quebra de linha quando necessário */
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .hashtagContainer li {
+            white-space: normal; /* Permite que o texto quebre linha */
+            padding: 2px;
         }
 
         .github {
@@ -49,6 +52,7 @@
         flex-direction: column;
         text-overflow: ellipsis;
         height: auto;
+
         h1 {
             text-align: left;
             font-size: $md !important;
@@ -67,7 +71,8 @@
         }
     }
 }
-@media (max-width:840px){
+
+@media (max-width:840px) {
     .cardProjectContainer {
         min-width: 80%;
 

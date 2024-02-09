@@ -1,9 +1,8 @@
 export const repositories = [
   {
     name: 'Portifolio_2023',
-    date: '12/2023',
     languages_list: ['ReactJs', 'SASS', 'NextJs'],
-    html_url: '',
+    html_url: 'https://portfolio-nine-weld-48.vercel.app/',
     github: 'https://github.com/tiagofmuniz/portfolio_v2023.git',
     description: 'Primeiro portfolio criado independentemente no início de meus estudos de next js.',
     use_instructions: [
@@ -114,36 +113,5 @@ export const repositories = [
     functionalities: ['Consultar condição do clima em cidades específicas.'],
     images: [],
   },
-  {
-    name: 'portfolio',
-    date: '10/01/2024',
-    languages_list: ['React', 'Next.js', 'EmailJs API', 'Typescript', 'sass'],
-    github: '',
-    html_url: 'https://github.com/tiagofmuniz/portfolio-.git',
-    name: 'Portfolio',
-    description: 'Primeiro projeto feito em Next.js, servindo como um portfólio que vincula outros projetos front-end criados.',
-    use_instructions: [
-      'Com o git instalado, crie uma pasta para o projeto, abra seu editor de código preferido na pasta e no terminal digite os comandos:\n git init \n Em seguida: git clone https://github.com/tiagofmuniz/portfolio-.git',
-      'Instale o Node.js (https://nodejs.org/en/)',
-      'Abra o projeto em seu editor de texto preferido.',
-      'Instale as dependências necessárias com o comando "npm i" ou "yarn install" caso o utilize.',
-      'Execute o projeto com o comando "npm run dev" e abra-o em "https://localhost:3000"',
-    ],
-    main_learning: [
-      'Configuração do Ambiente Next.js',
-      'Roteamento Dinâmico',
-      'Páginas Estáticas e Dinâmicas',
-      'Componentes Reutilizáveis',
-      'Estilização com CSS-in-JS',
-      'Integração com API EmailJs',
-      'Otimização de Imagens',
-      'Controle de Estado',
-      'SEO (Search Engine Optimization)',
-      'Responsividade',
-      'Deploy',
-      'Controle de Versão',
-      'Melhores Práticas de Desenvolvimento',
-    ],
-    images: [],
-  },
+
 ];
