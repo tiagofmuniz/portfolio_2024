@@ -72,7 +72,9 @@ export default function AboutPage() {
 
           <div className={styles.socialItems}>
             {channelList.map((item) => (
-              <InteractiveIconTower id={item.label} key={item.label} icon={item.icon} url={item.value} />
+              <div id={item.label}>
+                <InteractiveIconTower key={item.label} icon={item.icon} url={item.value} />
+              </div>
             ))}
           </div>
         </div>
