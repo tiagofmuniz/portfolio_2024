@@ -21,26 +21,28 @@
         margin-bottom: $sm;
 
         .folder {
-            width: 30px;
-            height: 30px;
+            min-width: 30px;
+            min-height: 30px;
             fill: $emphasys_color;
         }
 
         .hashtagContainer {
             display: flex;
-            flex-wrap: wrap; /* Adiciona quebra de linha quando necessário */
+            flex-wrap: wrap;
+            /* Adiciona quebra de linha quando necessário */
             justify-content: center;
             width: 100%;
         }
-        
+
         .hashtagContainer li {
-            white-space: normal; /* Permite que o texto quebre linha */
+            white-space: normal;
             padding: 2px;
+
         }
 
         .github {
-            width: 20px;
-            height: 20px;
+            min-width: 30px;
+            min-height: 30px;
             border-radius: 50%;
         }
     }
