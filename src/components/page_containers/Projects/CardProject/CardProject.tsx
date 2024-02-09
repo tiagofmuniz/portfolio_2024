@@ -20,7 +20,7 @@ export default function CardProject({ repo }) {
 
         <ul className={styles.hashtagContainer}>
           {languages_list?.map((language: string, index: number) => (
-            <li key={index}>{`#${language} `}</li>
+            <li key={index}>{`#${language}`}</li>
           ))}
         </ul>
 

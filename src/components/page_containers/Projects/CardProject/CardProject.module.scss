@@ -29,6 +29,10 @@
         .hashtagContainer {
             align-self: center;
             text-align: center;
+            display: flex;
+            li{
+                padding: 2px;
+            }
         }
 
         .github {
@@ -40,17 +44,11 @@
 
     .content {
         width: 100%;
-        // height: 85%;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         text-overflow: ellipsis;
-        // border: 1px dashed yellow;
         height: auto;
-
-
-
-
         h1 {
             text-align: left;
             font-size: $md !important;
