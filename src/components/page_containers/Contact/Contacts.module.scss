@@ -33,6 +33,11 @@
                 flex-direction: column;
                 width: 100%;
 
+                .successMessage {
+                    color: $emphasys_color;
+                    text-align: center;
+                }
+
                 p {
                     font-size: $sm;
                 }
@@ -219,6 +224,7 @@
                 .planetIcon {
                     display: none;
                 }
+
                 .quoteContainer {
                     max-width: 100%;
                 }

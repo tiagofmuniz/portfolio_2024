@@ -8,32 +8,32 @@
   align-items: center;
   margin: 0 auto;
   position: relative;
-  
-  
+
+
   .img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 0.5 * $sm;
   }
-  
+
   .mainScreen {
     width: 100%;
     height: auto;
     transition: all 0.5s;
-    
-    
+
+
     &:hover {
       transform: scale(1.1);
       transition: all 0.5s;
       overflow: hidden;
-      
+
       ~.slideNavigationContainer {
         margin-top: 1%;
       }
     }
   }
-  
+
   .slideNavigationContainer {
     width: 105%;
     margin-top: -10%;
@@ -44,6 +44,10 @@
     padding: 5px;
     transition: 0.5s;
 
+    .center {
+      justify-content: center;
+    }
+
     .thumbnailContainer {
       width: 100%;
       height: auto;
@@ -51,7 +55,7 @@
       gap: 5%;
 
       .thumbnailItem {
-        min-width: 30%;
+        max-width: 30%;
         height: auto;
         filter: blur(1px);
 

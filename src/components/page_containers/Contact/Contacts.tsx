@@ -6,7 +6,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Tippy from 'tippy.js';
 import 'react-tippy/dist/tippy.css';
 import 'tippy.js/dist/tippy.css';
-
 import styles from './Contacts.module.scss';
 import Balancer from 'react-wrap-balancer';
 import WaterMark from 'components/ui/WaterMark/WaterMark';
@@ -26,11 +25,14 @@ type contactFormData = z.infer<typeof contactFormSchema>;
 export default function Contacts() {
   const [afterPosition, setAfterPosition] = useState<string | number>('-100%');
   const [colorTextBtn, setcolorTextBtn] = useState<string>('');
+  const [isSendEmail, setIsSendEmail] = useState<boolean>(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
 
   const {
     register,
     watch,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<contactFormData>({
     mode: 'all',
@@ -41,8 +43,12 @@ export default function Contacts() {
     console.log(data);
     const { name, email, subject, message } = data;
     const params = { name, email, subject, message };
-    const response = await axios.post('/api', params);
-    return response;
+    await axios.post('/api', params);
+    setIsSendEmail(true);
+    setShowSuccessMessage(true);
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 3000);
   };
 
   const contactList = channels.filter((item) => item.label === 'whatsapp' || item.label === 'linkedin' || item.label === 'github');
@@ -69,6 +75,12 @@ export default function Contacts() {
       }))();
   }, [watch]);
 
+  useEffect(() => {
+    if (isSendEmail) {
+      reset();
+    }
+  }, [isSendEmail, reset]);
+
   interface InlineStyle {
     [key: string]: string | number;
   }
@@ -88,6 +100,8 @@ export default function Contacts() {
         <div className={styles.content}>
           <div className={`${styles.col} ${styles.leftCol}`}>
             <form className={styles.formContact} onSubmit={handleSubmit(onSubmit)}>
+            {showSuccessMessage && <div className={styles.successMessage}>Email enviado com sucesso!</div>}
+
               <p>NOME</p>
               {errors.name && <span className={styles.error}>{errors.name.message}</span>}
               <input {...register('name')} type='text'></input>
@@ -121,7 +135,7 @@ export default function Contacts() {
             <div className={styles.infos}>
               {contactList?.map((item) => (
                 <div key={item.label} id={item.label} className={styles.cubeContainer}>
-                  <InteractiveIconTower url={item.value} icon={item.icon}/>
+                  <InteractiveIconTower url={item.value} icon={item.icon} />
                 </div>
               ))}
             </div>

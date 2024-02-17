@@ -14,6 +14,7 @@ interface CarouselProps {
 export default function Carousel({ name, github, html_url, cover, images }: CarouselProps) {
   const [width, setWidth] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+  const justifyThumbnail = images.length <=3 ? styles.center : ''
 
   const carousel = useRef(null);
 
@@ -37,14 +38,14 @@ export default function Carousel({ name, github, html_url, cover, images }: Caro
           alt=''
         />
       </div>
-      <motion.div whileTap={{ cursor: 'grabbing' }} className={styles.slideNavigationContainer} ref={carousel}>
+      <motion.div whileTap={{ cursor: 'grabbing' }} className={`${styles.slideNavigationContainer}`} ref={carousel}>
         <motion.div
           drag='x'
           dragConstraints={{ right: 0, left: -width }}
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
-          className={styles.thumbnailContainer}>
+          className={`${styles.thumbnailContainer}  ${justifyThumbnail}`}>
           {images.map((image, index) => (
             <motion.div
               className={`${styles.thumbnailItem} ${activeIndex === index ? styles.activeItem : ''}`}

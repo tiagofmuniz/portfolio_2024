@@ -34,7 +34,7 @@ export default function CardProject({ repo }) {
 
         <Link className={styles.link} href={`/projects/${name}`}>
           <p>
-            <Balancer ratio={1} preferNative={false}>
+            <Balancer ratio={.5} preferNative={false}>
               {resumeDescription}
             </Balancer>
           </p>
