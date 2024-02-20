@@ -6,12 +6,10 @@ import { menu_list } from 'app/api/(data)/menu_list';
 import Tippy from 'tippy.js';
 import 'react-tippy/dist/tippy.css';
 import 'tippy.js/dist/tippy.css';
-import { useRouter } from 'next/navigation';
 
 export default function FixedMenu() {
   const { activeSection } = useSectionContext();
   const response = menu_list;
-  const router = useRouter();
 
   useEffect(() => {
     response?.forEach((item) => {

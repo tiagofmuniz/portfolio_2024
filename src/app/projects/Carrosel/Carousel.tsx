@@ -14,8 +14,7 @@ interface CarouselProps {
 export default function Carousel({ name, github, html_url, cover, images }: CarouselProps) {
   const [width, setWidth] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log(images)
-  const justifyThumbnail = images.length <=3 ? styles.center : ''
+  const justifyThumbnail = images.length <= 3 ? styles.center : '';
 
   const carousel = useRef(null);
 

@@ -16,7 +16,7 @@ const SectionObserver = ({ sectionId, children }) => {
           }
         });
       },
-      { threshold: .5 } 
+      { threshold: .8 } 
     );
 
     if (sectionRef.current) {
@@ -28,7 +28,7 @@ const SectionObserver = ({ sectionId, children }) => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, [sectionId, setSection]);
+  }, [sectionId]);
 
   return <div ref={sectionRef}>{children}</div>;
 };

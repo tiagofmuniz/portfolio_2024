@@ -12,7 +12,7 @@ export default function Menu() {
   const pathName = usePathname();
 
   function handleActive(id: string) {
-
+    console.log(id);
     setSection(activeSection);
     if (pathName !== '/') {
       router.push(`/#${id}`);
