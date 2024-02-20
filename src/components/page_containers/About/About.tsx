@@ -35,7 +35,7 @@ export default function AboutPage() {
       </SectionObserver>
 
       <div className={styles.hero_container}>
-        <Image src='/images/zyro_image.png' className={styles.profile_img} width={300} height={300} alt='' />
+        <Image src='/images/pp.png' className={styles.profile_img} width={300} height={300} alt='' />
 
         <div className={styles.hero_text}>
           <p>
