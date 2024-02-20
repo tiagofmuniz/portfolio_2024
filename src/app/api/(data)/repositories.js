@@ -1,6 +1,6 @@
 export const repositories = [
   {
-    name: 'Portifolio_2023',
+    name: 'Portfolio_2023',
     languages_list: ['ReactJs', 'SASS', 'NextJs', 'EmailJs'],
     html_url: 'https://portfolio-2023-tiagofmuniz.vercel.app/',
     github: 'https://github.com/tiagofmuniz/portfolio_2023.git',
