@@ -1,6 +1,6 @@
 export const repositories = [
   {
-    name: 'Portfolio_2023',
+    name: 'portfolio_2023',
     languages_list: ['ReactJs', 'SASS', 'NextJs', 'EmailJs'],
     html_url: 'https://portfolio-2023-tiagofmuniz.vercel.app/',
     github: 'https://github.com/tiagofmuniz/portfolio_2023.git',
@@ -27,10 +27,10 @@ export const repositories = [
       'Controle de Versão',
       'Melhores Práticas de Desenvolvimento',
     ],
-    images: ['1-Home.png', '2-Sobre.png', '3-Projetos.png', '4-Contato.png'],
+    images: ['home.png', 'sobre.png', 'projetos.png', 'contato.png'],
   },
   {
-    name: 'SmileSync',
+    name: 'smileSync',
     languages_list: ['NextJS', 'Sass', 'Zod', 'Node', 'Typescript', 'MongoDB', 'JWT', 'Nodemailer'],
     github: 'https://github.com/tiagofmuniz/SmileSync.git',
     html_url: 'https://smile-sync.vercel.app/',
