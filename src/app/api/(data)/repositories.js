@@ -59,7 +59,7 @@ export const repositories = [
       'Alteração de senha com envio de código de segurança por email.',
       'Interface responsiva para uma experiência de usuário otimizada em diferentes dispositivos.',
     ],
-    images: ['Criar_conta.gif', 'Logar.gif', 'Recuperar_senha.gif'],
+    images: ['criar_conta.gif', 'logar.gif', 'recuperar_senha.gif'],
   },
   {
     name: 'Consulta_clima',
