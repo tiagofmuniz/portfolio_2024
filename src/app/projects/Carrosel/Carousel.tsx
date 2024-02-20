@@ -53,7 +53,7 @@ export default function Carousel({ name, github, html_url, cover, images }: Caro
               onClick={() => handleItemClick(index)}>
               <figure>
                 <Image className={styles.img} width={1260} height={610} src={`/images/projects/${name}/${image}`} alt='' />
-                <figcaption>{`${image.replace('_', ' ').toUpperCase()}`}</figcaption>
+                <figcaption>{`${image.replace('_', ' ').toUpperCase().replace('.gif', '').toUpperCase()}`}</figcaption>
               </figure>
             </motion.div>
           ))}
