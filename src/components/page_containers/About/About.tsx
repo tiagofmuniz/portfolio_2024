@@ -40,7 +40,7 @@ export default function AboutPage() {
         <div className={styles.hero_text}>
           <p>
             <Balancer ratio={0.5} preferNative={false}>
-              Formado em Sistemas de informação, possuo experiência em desenvolvimento web com ênfase com no ecossistema JavaScript,
+              Formado em Sistemas de informação, possuo experiência em desenvolvimento web com ênfase no ecossistema JavaScript,
               abrangendo tecnologias como React, Next e Node.
             </Balancer>
           </p>

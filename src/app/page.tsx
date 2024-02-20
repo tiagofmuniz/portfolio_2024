@@ -13,7 +13,7 @@ export default function App() {
   const client = new QueryClient();
 
   return (
-    <QueryClientProvider client={client}>
+    // <QueryClientProvider client={client}>
       <main className={styles.main}>
         <section id='home' className={`${styles.section} ${styles.sectionHome}`}>
           <Home />
@@ -37,6 +37,6 @@ export default function App() {
 
         <div className={styles.sandbox}></div>
       </main>
-    </QueryClientProvider>
+    // </QueryClientProvider>
   );
 }

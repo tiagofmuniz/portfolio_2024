@@ -21,9 +21,9 @@ export default function Home() {
       </div>
       <div className={styles.text}>
         <p className={styles.outline}>
-          meu negócio é criar &nbsp;
+          meu negócio é criar&nbsp;
           <span className={styles.experience}>
-            experiências digitais <br /> interativas e funcionais
+            experiências digitais <br />interativas e funcionais
           </span>
         </p>
       </div>
